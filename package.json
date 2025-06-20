@@ -29,10 +29,8 @@
   "scripts": {
     "lint": "eslint --fix \"**/*.{ts,tsx}\"",
     "build": "tsc && vite build && node ./scripts/post-build.js",
-    "prepublishOnly": "tsc && vite build && node ./scripts/post-build.js",
-    "prepack": "tsc && vite build && node ./scripts/post-build.js",
     "start": "vite serve",
-    "prepare": "husky install",
+    "prepare": "husky install && npm run build",
     "unit:test": "jest __tests__/",
     "unit:test:single": "jest --findRelatedTests",
     "unit:test:watch": "jest --watch __tests__/",
